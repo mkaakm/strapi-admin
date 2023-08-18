@@ -1,0 +1,146 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "Sale": {
+      "type": "integer"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Off-plan",
+        "Residential",
+        "Commercial"
+      ]
+    },
+    "PropertyTypeResidental": {
+      "type": "enumeration",
+      "enum": [
+        "Apartment",
+        "Villa",
+        "Townhouse",
+        "Penthouse",
+        "Duplex",
+        "Plot",
+        "Land"
+      ]
+    },
+    "PropertyTypeCommercial": {
+      "type": "enumeration",
+      "enum": [
+        "Office space",
+        "Retail",
+        "Whole building",
+        "Full floor",
+        "Plot",
+        "Factory",
+        "Half floor",
+        "Labor camp",
+        "Staff accomodation",
+        "Warehouse"
+      ]
+    },
+    "Photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Plan": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Street_View": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Address": {
+      "type": "customField",
+      "customField": "plugin::location-field.location"
+    },
+    "Square": {
+      "type": "integer"
+    },
+    "Bedrooms": {
+      "type": "enumeration",
+      "enum": [
+        "Studio",
+        "Bedroom 1",
+        "Bedrooms 2",
+        "Bedrooms 3",
+        "Bedrooms 4",
+        "Bedrooms 5",
+        "Bedrooms 6",
+        "Bedrooms 7+"
+      ]
+    },
+    "Agent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agent.agent"
+    },
+    "View": {
+      "type": "boolean"
+    },
+    "Sort": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "ShortDescription": {
+      "type": "text"
+    },
+    "Bathrooms": {
+      "type": "enumeration",
+      "enum": [
+        "Bathroom 1",
+        "Bathrooms 2",
+        "Bathrooms 3",
+        "Bathrooms 4",
+        "Bathrooms 5",
+        "Bathrooms 6",
+        "Bathrooms 7+"
+      ]
+    }
+  }
+}

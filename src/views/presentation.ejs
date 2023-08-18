@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      /*body {*/
+      /*  !*background: rgb(204,204,204);*!*/
+      /*  width: 29.7cm;*/
+      /*  height: 21cm;*/
+      /*}*/
+      page {
+        width: 29.7cm;
+        height: 21cm;
+        display: block;
+        /*margin: 0 auto;*/
+
+        /*box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);*/
+        /*page-break-before: always;*/
+        break-after: page;
+      }
+
+      /*page[size="A4"] {*/
+      /*  width: 21cm;*/
+      /*  height: 29.7cm;*/
+      /*  break-after: page;*/
+      /*}*/
+
+      /*page[size="A4"][layout="landscape"] {*/
+      /*  width: 29.7cm;*/
+      /*  height: 21cm;*/
+      /*}*/
+
+      @media print {
+        body, page {
+          /*background: white;*/
+          margin: 0;
+          box-shadow: 0;
+        }
+      }
+
+      .mainImg {
+        width: 29.7cm;
+        height: 20.5cm;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .title {
+        text-align: center;
+        color: red;
+      }
+    </style>
+</head>
+<body>
+    <page size="A4" layout="landscape" class="page1">
+        <img class="mainImg" src="https://res.cloudinary.com/dpzx4xaru/image/upload/v1690545025/asia_culturecenter_xq5f_G_Yx_Ecxw_unsplash_b6f9917246.jpg" alt="Logo image">
+<!--        <h2 class="title"><%= templateData.title %></h2>-->
+    </page>
+    <page size="A4" layout="landscape">
+        hhhh
+    </page>
+<!--    <page size="A4" layout="landscape"></page>-->
+<!--    <page size="A4" layout="landscape"></page>-->
+<!--    <page size="A4" layout="landscape" class="page2"></page>-->
+<!--    <page size="A4" layout="landscape" class="page3"></page>-->
+<!--    <page size="A4" layout="landscape"></page>-->
+<!--    <page size="A4" layout="landscape"></page>-->
+<!--    <page size="A4" layout="landscape"></page>-->
+<!--    <page size="A4" layout="landscape"></page>-->
+</body>
+</html>
